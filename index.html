@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDACTR - Text Scrambler</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>REDACTR</h1>
+        <p>...scramble words from a body of text</p>
+        <form id="redactform">
+            <div class="form-group">
+                <label for="originalText">Enter your content:</label>
+                <textarea id="originalText" placeholder="Enter your content"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="wordsToScramble">Words to Scramble (separated by spaces):</label>
+                <input type="text" id="wordsToScramble" name="wordsToScramble" placeholder="e.g apple, banana, orange">
+            </div>
+            <div class="form-group">
+                <label for="chooseReplacement"> Choose Replacement</label>
+                <select name="replacementType">
+                    <option disabled selected>Select type</option>
+                    <option value="*">Asterisks</option>
+                    <option value="?">Question Mark</option>
+                    <option value="_">Underscore</option>
+                    <option value="-">Dashes</option>
+                </select>
+
+            </div>
+                <button type="button" onclick="redactAndScramble()">Redact Now</button>
+                <button type="button" onclick="resetform()">Reset Form</button>
+        </form>
+        <p id="result"></p>
+        <p id="stats"></p>
+     
+    </div>
+  
+        
+</body>
+</html>
